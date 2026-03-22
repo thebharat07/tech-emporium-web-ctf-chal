@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container py-4">
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-5">
+            <div class="badge bg-primary mb-2">Est. 1998</div>
+            <h1 class="display-4 fw-bold text-dark">Premium <span class="text-primary">Hardware</span> for Enterprise.</h1>
+            <p class="lead text-muted mb-4">
+                Bagadi Tech Emporium is the region's leading supplier of high-end servers, storage solutions, and WORM-drive kernels. 
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="/products" class="btn btn-primary btn-lg px-5 shadow">Browse Inventory</a>
+                <a href="/login" class="btn btn-outline-dark btn-lg px-4">Employee Portal</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-5 pt-5 text-center border-top">
+        <div class="col-md-4">
+            <div class="p-3">
+                <div class="h5 fw-bold text-primary"><i class="bi bi-shield-check"></i> Secure Procurement</div>
+                <p class="small text-muted">Our legacy <a href="/login" class="text-decoration-none">authentication gates</a> utilize multi-factor verification (currently under maintenance).</p>
+            </div>
+        </div>
+        <div class="col-md-4 border-start border-end">
+            <div class="p-3">
+                <div class="h5 fw-bold text-primary"><i class="bi bi-search"></i> Inventory Logic</div>
+                <p class="small text-muted">Search our <a href="/products" class="text-decoration-none">global inventory</a> using our high-speed SQL-driven search engine.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3">
+                <div class="h5 fw-bold text-primary"><i class="bi bi-hdd-network"></i> WORM Storage</div>
+                <p class="small text-muted">Our proprietary Write-Once-Read-Many storage ensures that system logs remain immutable once deployed.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
