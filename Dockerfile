@@ -19,7 +19,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 6. Set up the ROOT FLAG (Hidden from low-privilege users)
-RUN mkdir -p /root && chown root:root /root && chmod 700 /root
+# We put it in /root so you MUST be root to even list the directory.
+RUN echo "CTF{W0RM_DR1V3_SUID_MAST3R_9921}" > /root/flag.txt \
+    && chown root:root /root/flag.txt \
+    && chmod 400 /root/flag.txt
 
 # 7. Compile the SUID Binary (The "Maintenance Tool" exploit)
 # We copy the C code, compile it, set the SUID bit, then DELETE the source.
